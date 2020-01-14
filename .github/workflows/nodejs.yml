@@ -17,6 +17,11 @@ jobs:
         npm ci
         npm run lint
         npm test
+    - name: Run semantic-release
+      run: npm run semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Archive production artifacts
       uses: actions/upload-artifact@v1
       with:
