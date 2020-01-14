@@ -1,5 +1,5 @@
 {
-    "name": "@ArielAirOne/textlint-plugin-po",
+    "name": "@arielairone/textlint-plugin-po",
     "version": "0.0.0-development",
     "description": "A textlint plugin processing the .po file format",
     "repository": "https://github.com/WorksApplications/textlint-plugin-po",
