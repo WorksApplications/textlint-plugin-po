@@ -1,0 +1,25 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node.js v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Build
+      run: |
+        npm ci
+        npm run lint
+        npm test
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: coverage
+        path: coverage
+      if: always()

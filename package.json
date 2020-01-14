@@ -1,0 +1,72 @@
+{
+    "name": "@ArielAirOne/textlint-plugin-po",
+    "version": "0.0.0-development",
+    "description": "A textlint plugin processing the .po file format",
+    "repository": "https://github.com/WorksApplications/textlint-plugin-po",
+    "homepage": "https://github.com/WorksApplications/textlint-plugin-po#readme",
+    "bugs": {
+        "url": "https://github.com/WorksApplications/textlint-plugin-po/issues"
+    },
+    "license": "MIT",
+    "author": "Works Applications Co.,Ltd.",
+    "contributors": [
+        "Ponraj Subramanian",
+        "Harish Radhakrishnan",
+        "Arun Kumar Murugesan",
+        "Kengo TODA"
+    ],
+    "files": [
+        "lib"
+    ],
+    "main": "./lib/main.js",
+    "keywords": [
+        "lint",
+        "textlint",
+        "plugin",
+        "po"
+    ],
+    "engines": {
+        "node": ">=12.0",
+        "npm": ">=6.13"
+    },
+    "scripts": {
+        "prepack": "tsc",
+        "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
+        "test": "nyc --reporter=html --extension .ts mocha --forbid-only \"test/**/*.spec.ts\""
+    },
+    "dependencies": {
+        "@textlint/ast-node-types": "^4.2.5",
+        "pofile": "^1.1.0",
+        "structured-source": "^3.0.2"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.4",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.12.3",
+        "chai": "^4.2.0",
+        "husky": "^3.0.9",
+        "lint-staged": "^9.5.0",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "prettier": "^1.18.2",
+        "pretty-quick": "^2.0.0",
+        "textlint": "^11.4.0",
+        "ts-node": "^8.5.4",
+        "typescript": "^3.7.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "post-checkout": "git secrets --register-aws"
+        }
+    },
+    "lint-staged": {
+        "*": [
+            "git secrets --scan"
+        ],
+        "*.{ts,tsx,md,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
