@@ -9,21 +9,7 @@ interface TxtDocumentData {
     endRange: number;
     endColumn: number;
 }
-var increamenter = 0;
-
 export default function parse(text: string): TxtParentNode {
-    /**
-     * Converting CRLF to LF format for common \n splitting usage
-     * Because CRLF filesystem has \r\n escape sequence format
-     * LF filesytem has \n escape sequence format
-     *
-     * increamenter variable used increament the splitted value
-     * Eg: \r\n - increamenter ->2
-     *     \n - increamenter   ->1
-     */
-    if (text.includes('\r\n')) increamenter = 2;
-    else increamenter = 1;
-
     const tempText = text.replace(/\r\n/g, '\n');
     const lines = tempText.split('\n');
 
@@ -99,6 +85,16 @@ function getChild(value: string, rawData: string, indNum: number, tempText: stri
 }
 
 function getDocumentData(rawData: string, strIndex: number, tempText: string): TxtDocumentData {
+    /**
+     * Converting CRLF to LF format for common \n splitting usage
+     * Because CRLF filesystem has \r\n escape sequence format
+     * LF filesytem has \n escape sequence format
+     *
+     * increamenter variable used increament the splitted value
+     * Eg: \r\n - increamenter ->2
+     *     \n - increamenter   ->1
+     */
+    const increamenter = rawData.includes('\r\n') ? 2 : 1;
     /**
      *This method will find the rawData, start and end lines,ranges and endcolumn values
      */
