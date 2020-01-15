@@ -9,12 +9,9 @@ interface TxtDocumentData {
     endRange: number;
     endColumn: number;
 }
-var tempText: string,
-    increamenter = 0;
+var increamenter = 0;
 
 export default function parse(text: string): TxtParentNode {
-    var itr = 0,
-        lines;
     /**
      * Converting CRLF to LF format for common \n splitting usage
      * Because CRLF filesystem has \r\n escape sequence format
@@ -27,8 +24,8 @@ export default function parse(text: string): TxtParentNode {
     if (text.includes('\r\n')) increamenter = 2;
     else increamenter = 1;
 
-    tempText = text.replace(/\r\n/g, '\n');
-    lines = tempText.split('\n');
+    const tempText = text.replace(/\r\n/g, '\n');
+    const lines = tempText.split('\n');
 
     let linesLength = lines.length,
         linesIndex = linesLength - 1,
@@ -40,6 +37,7 @@ export default function parse(text: string): TxtParentNode {
         poItems = po.items;
 
     let children: TxtParentNode[] = [];
+    let itr = 0;
 
     /**Finding an lines of 'msgstr' from the po data and store it in the indexes array */
     lines.forEach(elem => {
@@ -52,7 +50,7 @@ export default function parse(text: string): TxtParentNode {
     itr = 1;
     poItems.forEach((element: { msgstr: string[] } | null) => {
         if (element !== null) {
-            var child = getChild(element.msgstr[0], text, indexes[itr]);
+            var child = getChild(element.msgstr[0], text, indexes[itr], tempText);
             children.push(child);
             itr++;
         }
@@ -75,11 +73,11 @@ export default function parse(text: string): TxtParentNode {
         children: children
     };
 }
-function getChild(value: string, rawData: string, indNum: number): TxtParentNode {
+function getChild(value: string, rawData: string, indNum: number, tempText: string): TxtParentNode {
     /**
      * Here is the call back function which will return the  rawData and it's start, end lines
      */
-    var documentData = getDocumentData(rawData, indNum);
+    var documentData = getDocumentData(rawData, indNum, tempText);
 
     return {
         type: ASTNodeTypes.Paragraph,
@@ -100,7 +98,7 @@ function getChild(value: string, rawData: string, indNum: number): TxtParentNode
     };
 }
 
-function getDocumentData(rawData: string, strIndex: number): TxtDocumentData {
+function getDocumentData(rawData: string, strIndex: number, tempText: string): TxtDocumentData {
     /**
      *This method will find the rawData, start and end lines,ranges and endcolumn values
      */
