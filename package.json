@@ -48,7 +48,7 @@
         "@semantic-release/release-notes-generator": "^7.3.5",
         "@types/chai": "^4.2.4",
         "@types/mocha": "^5.2.7",
-        "@types/node": "^12.12.3",
+        "@types/node": "^13.1.7",
         "chai": "^4.2.0",
         "husky": "^4.0.9",
         "lint-staged": "^9.5.0",
