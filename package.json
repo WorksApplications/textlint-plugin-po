@@ -45,7 +45,7 @@
         "@semantic-release/commit-analyzer": "^7.0.0",
         "@semantic-release/github": "^6.0.1",
         "@semantic-release/npm": "^6.0.0",
-        "@semantic-release/release-notes-generator": "^7.3.5",
+        "@semantic-release/release-notes-generator": "^9.0.0",
         "@types/chai": "^4.2.4",
         "@types/mocha": "^5.2.7",
         "@types/node": "^13.1.7",
