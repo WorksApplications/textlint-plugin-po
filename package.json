@@ -59,7 +59,7 @@
         "semantic-release": "^17.0.1",
         "textlint": "^11.4.0",
         "ts-node": "^9.0.0",
-        "typescript": "^3.7.4"
+        "typescript": "^4.0.2"
     },
     "husky": {
         "hooks": {
