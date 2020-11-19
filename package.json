@@ -72,8 +72,7 @@
             "git secrets --scan"
         ],
         "*.{ts,tsx,md,json}": [
-            "prettier --write",
-            "git add"
+            "prettier --write"
         ]
     },
     "publishConfig": {
