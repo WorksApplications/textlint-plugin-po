@@ -26,7 +26,7 @@ export default function parse(text: string): TxtParentNode {
     let itr = 0;
 
     /**Finding an lines of 'msgstr' from the po data and store it in the indexes array */
-    lines.forEach(elem => {
+    lines.forEach((elem) => {
         if (elem.toString().startsWith('msgstr')) {
             indexes.push(itr);
         }
@@ -49,14 +49,14 @@ export default function parse(text: string): TxtParentNode {
         loc: {
             start: {
                 line: 1,
-                column: 1
+                column: 1,
             },
             end: {
                 line: linesLength,
-                column: columnVal
-            }
+                column: columnVal,
+            },
         },
-        children: children
+        children: children,
     };
 }
 function getChild(value: string, rawData: string, indNum: number, tempText: string): TxtParentNode {
@@ -73,14 +73,14 @@ function getChild(value: string, rawData: string, indNum: number, tempText: stri
         loc: {
             start: {
                 line: documentData.startLine,
-                column: 1
+                column: 1,
             },
             end: {
                 line: documentData.endLine,
-                column: documentData.endColumn
-            }
+                column: documentData.endColumn,
+            },
         },
-        children: []
+        children: [],
     };
 }
 
@@ -186,7 +186,7 @@ function getDocumentData(rawData: string, strIndex: number, tempText: string): T
         endLine: endLine,
         startRange: startRange,
         endRange: endRange,
-        endColumn: endColumn
+        endColumn: endColumn,
     };
 }
 function popEmptyValues(array: string[] = []) {

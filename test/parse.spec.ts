@@ -16,12 +16,12 @@ describe('#parse', () => {
                 loc: {
                     start: {
                         line: 1,
-                        column: 1
+                        column: 1,
                     },
                     end: {
                         line: 24,
-                        column: 13
-                    }
+                        column: 13,
+                    },
                 },
                 children: [
                     {
@@ -32,14 +32,14 @@ describe('#parse', () => {
                         loc: {
                             start: {
                                 line: 20,
-                                column: 1
+                                column: 1,
                             },
                             end: {
                                 line: 20,
-                                column: 11
-                            }
+                                column: 11,
+                            },
                         },
-                        children: []
+                        children: [],
                     },
                     {
                         type: 'Paragraph',
@@ -49,16 +49,16 @@ describe('#parse', () => {
                         loc: {
                             start: {
                                 line: 24,
-                                column: 1
+                                column: 1,
                             },
                             end: {
                                 line: 24,
-                                column: 13
-                            }
+                                column: 13,
+                            },
                         },
-                        children: []
-                    }
-                ]
+                        children: [],
+                    },
+                ],
             });
         });
     });
@@ -75,12 +75,12 @@ describe('#parse', () => {
                 loc: {
                     start: {
                         line: 1,
-                        column: 1
+                        column: 1,
                     },
                     end: {
                         line: 32,
-                        column: 6
-                    }
+                        column: 6,
+                    },
                 },
                 children: [
                     {
@@ -91,14 +91,14 @@ describe('#parse', () => {
                         loc: {
                             start: {
                                 line: 22,
-                                column: 1
+                                column: 1,
                             },
                             end: {
                                 line: 24,
-                                column: 4
-                            }
+                                column: 4,
+                            },
                         },
-                        children: []
+                        children: [],
                     },
                     {
                         type: 'Paragraph',
@@ -108,16 +108,16 @@ describe('#parse', () => {
                         loc: {
                             start: {
                                 line: 30,
-                                column: 1
+                                column: 1,
                             },
                             end: {
                                 line: 32,
-                                column: 6
-                            }
+                                column: 6,
+                            },
                         },
-                        children: []
-                    }
-                ]
+                        children: [],
+                    },
+                ],
             });
         });
     });
