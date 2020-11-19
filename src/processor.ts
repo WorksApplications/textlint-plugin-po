@@ -14,9 +14,9 @@ export default class PoProcessor {
             postProcess(messages: any[], filePath?: string) {
                 return {
                     messages,
-                    filePath: filePath ? filePath : '<text>'
+                    filePath: filePath ? filePath : '<text>',
                 };
-            }
+            },
         };
     }
 }
