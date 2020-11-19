@@ -34,7 +34,7 @@
         "prepack": "tsc",
         "semantic-release": "semantic-release",
         "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
-        "test": "nyc --reporter=html --extension .ts mocha --forbid-only \"test/**/*.spec.ts\""
+        "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\""
     },
     "dependencies": {
         "@textlint/ast-node-types": "^4.2.5",

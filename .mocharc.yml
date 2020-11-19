@@ -1,0 +1,6 @@
+require: ts-node/register
+watch-extensions: ts
+recursive: true
+reporter: spec
+timeout: 30000
+forbid-only: true
