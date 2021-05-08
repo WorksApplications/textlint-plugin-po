@@ -32,7 +32,6 @@
     },
     "scripts": {
         "prepack": "tsc",
-        "semantic-release": "semantic-release",
         "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
         "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\""
     },
