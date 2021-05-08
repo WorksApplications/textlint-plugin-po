@@ -3,12 +3,14 @@ import { expect } from 'chai';
 import 'mocha';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { test } from '@textlint/ast-tester';
 
 describe('#parse', () => {
     describe('when parsing .po file with single line msgstr', () => {
         const po = readFileSync(join('test', 'singleline.po'), 'utf-8');
         it('should return an expected AST', () => {
             const result = parse(po);
+            test(result);
             expect(result).to.eql({
                 type: 'Document',
                 raw: po,
@@ -68,6 +70,7 @@ describe('#parse', () => {
 
         it('should return an expected AST', () => {
             const result = parse(po);
+            test(result);
             expect(result).to.eql({
                 type: 'Document',
                 raw: po,
