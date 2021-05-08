@@ -14,7 +14,7 @@
     },
     "children": [
         {
-            "type": "Paragraph",
+            "type": "Str",
             "raw": "msgstr \"事例\"",
             "value": "事例",
             "range": [575, 586],
@@ -31,7 +31,7 @@
             "children": []
         },
         {
-            "type": "Paragraph",
+            "type": "Str",
             "raw": "msgstr \"他の事例\"",
             "value": "他の事例",
             "range": [638, 651],
