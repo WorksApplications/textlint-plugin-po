@@ -33,7 +33,8 @@
     "scripts": {
         "prepack": "tsc",
         "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
-        "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\""
+        "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\"",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@textlint/ast-node-types": "^4.2.5",
@@ -55,12 +56,6 @@
         "textlint": "^11.4.0",
         "ts-node": "^9.0.0",
         "typescript": "^4.0.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "post-checkout": "git secrets --register-aws"
-        }
     },
     "lint-staged": {
         "*": [
