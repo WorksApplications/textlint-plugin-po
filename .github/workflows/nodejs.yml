@@ -1,29 +1,35 @@
 name: Node CI
 
-on: [push]
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
-
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup Node.js v12
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - name: Read .nvmrc
+      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      id: nvm
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: 12.x
+        node-version: '${{ steps.nvm.outputs.NVMRC }}'
     - name: Build
       run: |
         npm ci
         npm run lint
         npm test
     - name: Run semantic-release
-      run: npm run semantic-release
+      run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: coverage
         path: coverage

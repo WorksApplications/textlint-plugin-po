@@ -32,9 +32,9 @@
     },
     "scripts": {
         "prepack": "tsc",
-        "semantic-release": "semantic-release",
         "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
-        "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\""
+        "test": "nyc --reporter=html --extension .ts mocha \"test/**/*.spec.ts\"",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@textlint/ast-node-types": "^4.2.5",
@@ -42,10 +42,6 @@
         "structured-source": "^3.0.2"
     },
     "devDependencies": {
-        "@semantic-release/commit-analyzer": "^8.0.0",
-        "@semantic-release/github": "^7.0.0",
-        "@semantic-release/npm": "^7.0.0",
-        "@semantic-release/release-notes-generator": "^9.0.0",
         "@types/chai": "^4.2.4",
         "@types/mocha": "^8.0.0",
         "@types/node": "^15.0.0",
@@ -61,12 +57,6 @@
         "ts-node": "^9.0.0",
         "typescript": "^4.0.2"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "post-checkout": "git secrets --register-aws"
-        }
-    },
     "lint-staged": {
         "*": [
             "git secrets --scan"
@@ -77,5 +67,10 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "release": {
+        "branches": [
+            "main"
+        ]
     }
 }
