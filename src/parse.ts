@@ -190,6 +190,7 @@ function getDocumentData(rawData: string, strIndex: number, tempText: string): T
     };
 }
 function popEmptyValues(array: string[] = []) {
+    if (array.length == 0) return array;
     /**
      * This will remove the '' and unwated data from the array by reverse order and subtract the value of unwanted strings too
      * because we don't need '',\n in the end of the raw data
