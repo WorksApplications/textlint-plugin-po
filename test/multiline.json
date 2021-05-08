@@ -1,0 +1,51 @@
+{
+    "type": "Document",
+    "raw": "# SOME DESCRIPTIVE TITLE.\n# Copyright (C) 2016-2018, author\n# This file is distributed under the same license as the package.\n# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.\n#\nmsgid \"\"\nmsgstr \"\"\n\"Project-Id-Version: product 1.0\n\"\n\"Report-Msgid-Bugs-To: \n\"\n\"POT-Creation-Date: 2019-11-05 12:44+0000\n\"\n\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n\"\n\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n\"\n\"MIME-Version: 1.0\n\"\n\"Content-Type: text/plain; charset=utf-8\n\"\n\"Content-Transfer-Encoding: 8bit\n\"\n\"Generated-By: Babel 2.7.0\n\"\n\n#: ../../example.rst:2\nmsgid \"\"\n\"Example in the \"\n\"multiple lines\"\nmsgstr \"\"\n\"複数行にまたがる\"\n\"事例\"\n\n#: ../../example.rst:3\nmsgid \"\"\n\"Another Example using \"\n\"multiple lines\"\nmsgstr \"\"\n\"複数行にまたがる\"\n\"他の事例\"",
+    "range": [0, 743],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 1
+        },
+        "end": {
+            "line": 32,
+            "column": 6
+        }
+    },
+    "children": [
+        {
+            "type": "Str",
+            "raw": "msgstr \"\"\n\"複数行にまたがる\"\n\"事例\"",
+            "value": "複数行にまたがる事例",
+            "range": [605, 632],
+            "loc": {
+                "start": {
+                    "line": 22,
+                    "column": 1
+                },
+                "end": {
+                    "line": 24,
+                    "column": 4
+                }
+            },
+            "children": []
+        },
+        {
+            "type": "Str",
+            "raw": "msgstr \"\"\n\"複数行にまたがる\"\n\"他の事例\"",
+            "value": "複数行にまたがる他の事例",
+            "range": [713, 742],
+            "loc": {
+                "start": {
+                    "line": 30,
+                    "column": 1
+                },
+                "end": {
+                    "line": 32,
+                    "column": 6
+                }
+            },
+            "children": []
+        }
+    ]
+}
