@@ -1,0 +1,51 @@
+{
+    "type": "Document",
+    "raw": "# SOME DESCRIPTIVE TITLE.\n# Copyright (C) 2016-2018, author\n# This file is distributed under the same license as the package.\n# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.\n#\nmsgid \"\"\nmsgstr \"\"\n\"Project-Id-Version: product 1.0\n\"\n\"Report-Msgid-Bugs-To: \n\"\n\"POT-Creation-Date: 2019-11-05 12:44+0000\n\"\n\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n\"\n\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n\"\n\"MIME-Version: 1.0\n\"\n\"Content-Type: text/plain; charset=utf-8\n\"\n\"Content-Transfer-Encoding: 8bit\n\"\n\"Generated-By: Babel 2.7.0\n\"\n\n#: ../../example.rst:2\nmsgid \"Example\"\nmsgstr \"事例\"\n\n#: ../../example.rst:3\nmsgid \"Another Example\"\nmsgstr \"他の事例\"",
+    "range": [0, 652],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 1
+        },
+        "end": {
+            "line": 24,
+            "column": 13
+        }
+    },
+    "children": [
+        {
+            "type": "Paragraph",
+            "raw": "msgstr \"事例\"",
+            "value": "事例",
+            "range": [575, 586],
+            "loc": {
+                "start": {
+                    "line": 20,
+                    "column": 1
+                },
+                "end": {
+                    "line": 20,
+                    "column": 11
+                }
+            },
+            "children": []
+        },
+        {
+            "type": "Paragraph",
+            "raw": "msgstr \"他の事例\"",
+            "value": "他の事例",
+            "range": [638, 651],
+            "loc": {
+                "start": {
+                    "line": 24,
+                    "column": 1
+                },
+                "end": {
+                    "line": 24,
+                    "column": 13
+                }
+            },
+            "children": []
+        }
+    ]
+}
