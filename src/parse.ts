@@ -66,7 +66,7 @@ function getChild(value: string, rawData: string, indNum: number, tempText: stri
     var documentData = getDocumentData(rawData, indNum, tempText);
 
     return {
-        type: ASTNodeTypes.Paragraph,
+        type: ASTNodeTypes.Str,
         raw: documentData.rawData,
         value: value,
         range: [documentData.startRange, documentData.endRange],

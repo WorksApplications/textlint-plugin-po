@@ -38,7 +38,7 @@ describe('#parse', () => {
                 },
                 children: [
                     {
-                        type: 'Paragraph',
+                        type: 'Str',
                         raw: 'msgstr ""\n"複数行にまたがる"\n"事例"',
                         value: '複数行にまたがる事例',
                         range: [605, 632],
@@ -55,7 +55,7 @@ describe('#parse', () => {
                         children: [],
                     },
                     {
-                        type: 'Paragraph',
+                        type: 'Str',
                         raw: `msgstr \"\"\n\"複数行にまたがる\"\n\"他の事例"`,
                         value: '複数行にまたがる他の事例',
                         range: [713, 742],
