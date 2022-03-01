@@ -1,11 +1,10 @@
 import parse from '../src/parse';
-import { expect } from 'chai';
-import 'mocha';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { test } from '@textlint/ast-tester';
 import singlelineJson from './singleline.json';
 import multilineJson from './multiline.json';
+import { describe, expect, it } from "@jest/globals"
 
 describe('#parse', () => {
     describe('when parsing .po file with single line msgstr', () => {
@@ -13,7 +12,7 @@ describe('#parse', () => {
         it('should return an expected AST', () => {
             const result = parse(po);
             test(result);
-            expect(result).to.eql(singlelineJson);
+            expect(result).toEqual(singlelineJson);
         });
     });
 
@@ -23,7 +22,7 @@ describe('#parse', () => {
         it('should return an expected AST', () => {
             const result = parse(po);
             test(result);
-            expect(result).to.eql(multilineJson);
+            expect(result).toEqual(multilineJson);
         });
     });
 });
