@@ -7,9 +7,6 @@ updates:
     time: "21:00"
   open-pull-requests-limit: 10
   ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 14.14.39
   - dependency-name: chai
     versions:
     - 4.3.3
