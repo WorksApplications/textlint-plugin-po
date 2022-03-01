@@ -6,16 +6,6 @@ updates:
     interval: daily
     time: "21:00"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: chai
-    versions:
-    - 4.3.3
-  - dependency-name: husky
-    versions:
-    - 5.0.9
-  - dependency-name: semantic-release
-    versions:
-    - 17.3.8
   commit-message:
     prefix: fix
     prefix-development: chore
