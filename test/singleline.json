@@ -5,7 +5,7 @@
     "loc": {
         "start": {
             "line": 1,
-            "column": 1
+            "column": 0
         },
         "end": {
             "line": 24,
@@ -21,7 +21,7 @@
             "loc": {
                 "start": {
                     "line": 20,
-                    "column": 1
+                    "column": 0
                 },
                 "end": {
                     "line": 20,
@@ -38,7 +38,7 @@
             "loc": {
                 "start": {
                     "line": 24,
-                    "column": 1
+                    "column": 0
                 },
                 "end": {
                     "line": 24,
