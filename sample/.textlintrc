@@ -1,0 +1,9 @@
+{
+  "filters": {},
+  "plugins": [
+    "@arielairone/textlint-plugin-po"
+  ],
+  "rules": {
+    "no-todo": true
+  }
+}

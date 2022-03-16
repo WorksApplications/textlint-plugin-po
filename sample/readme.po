@@ -1,0 +1,12 @@
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: product 1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Language: ja\n"
+
+#: README.md:1
+msgid "This directory provides a sample project that integrates textlint-plugin-po to textlint."
+msgstr "TODO: あとで翻訳する"

@@ -1,0 +1,17 @@
+{
+    "name": "sample",
+    "version": "1.0.0",
+    "description": "A sample project that uses textlint-plugin-po with textlint",
+    "main": "index.js",
+    "scripts": {
+        "test": "textlint README.po"
+    },
+    "keywords": [],
+    "author": "Kengo TODA <toda_k@worksap.co.jp>",
+    "license": "MIT",
+    "devDependencies": {
+        "@arielairone/textlint-plugin-po": "^1.0.22",
+        "textlint": "^12.1.1",
+        "textlint-rule-no-todo": "^2.0.1"
+    }
+}
