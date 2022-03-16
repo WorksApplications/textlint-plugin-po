@@ -32,7 +32,7 @@
     },
     "scripts": {
         "prepack": "tsc",
-        "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\"",
+        "lint": "prettier --check \"./**/*.{ts,tsx,md,json}\" \"!./.nyc_output/**\" \"!./coverage/**\"",
         "test": "jest",
         "prepare": "husky install"
     },
