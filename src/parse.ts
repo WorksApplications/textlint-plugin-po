@@ -49,7 +49,7 @@ export default function parse(text: string): TxtParentNode {
         loc: {
             start: {
                 line: 1,
-                column: 1,
+                column: 0,
             },
             end: {
                 line: linesLength,
@@ -73,7 +73,7 @@ function getChild(value: string, rawData: string, indNum: number, tempText: stri
         loc: {
             start: {
                 line: documentData.startLine,
-                column: 1,
+                column: 0,
             },
             end: {
                 line: documentData.endLine,
