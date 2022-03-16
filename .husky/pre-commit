@@ -2,3 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx --no lint-staged
+docker pull zricethezav/gitleaks:latest
+docker run -v $(pwd):/path zricethezav/gitleaks:latest detect --source="/path"
